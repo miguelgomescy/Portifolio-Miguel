@@ -23,13 +23,13 @@ const projects = [
   },
   {
     id: 2,
-    title: "Dashboard de vendas",
+    title: "Cozinha AI",
     description:
       "Painel administrativo com gráficos e KPIs para acompanhar desempenho comercial.",
-    techs: ["ReactJS", "MySQL", "PowerBI"],
-    codeUrl: "#",
-    liveUrl: "#",
-    preview: "/Footer.svg", // troca depois
+    techs: ["ReactNative", "Firestore", "API Google Gemini", "ReactJS"],
+    codeUrl: "https://github.com/miguelgomescy/CozinhaAI-LP",
+    liveUrl: "https://cozinha-ai-lp.vercel.app/",
+    preview: "/projects/COZINHA.svg",
     status: "online",
   },
   {
@@ -41,40 +41,40 @@ const projects = [
     codeUrl: "#",
     liveUrl: "#",
     preview: "/Footer.svg", // troca depois
-    status: "online",
+    status: "wip",
   },
   {
     id: 4,
-    title: "Landing para infoproduto",
+    title: "Landing Page: Academia",
     description:
       "Página otimizada para tráfego pago, focada em copy, provas sociais e captação de leads.",
-    techs: ["ReactJS", "Google Ads", "Meta Ads"],
-    codeUrl: "#",
-    liveUrl: "#",
-    preview: "/Footer.svg", // troca depois
+    techs: ["ReactJS", "CSS", "Vite"],
+    codeUrl: "https://github.com/miguelgomescy/AcademiaLP",
+    liveUrl: "https://academia-lp-zeta.vercel.app/",
+    preview: "/projects/academia.svg",
     status: "online",
   },
   {
     id: 5,
-    title: "Sistema interno",
+    title: "Landing Page: Hamburgeria",
     description:
       "Aplicação interna para organização de processos e acompanhamento de tarefas.",
-    techs: ["ReactJS", "NodeJS", "MySQL"],
-    codeUrl: "#",
-    liveUrl: "#",
-    preview: "/Footer.svg", // troca depois
-    status: "wip",
+    techs: ["ReactJS", "CSS", "Vite"],
+    codeUrl: "https://github.com/miguelgomescy/Hamburgeria",
+    liveUrl: "https://hamburgeria-brown.vercel.app/",
+    preview: "/projects/hamburgeria.svg",
+    status: "Online",
   },
   {
     id: 6,
-    title: "Painel de automação",
+    title: "Landing Page: Transportadora",
     description:
       "Interface para monitorar dados industriais e controlar processos de forma simples.",
-    techs: ["ReactJS", "API", "Automação"],
-    codeUrl: "#",
-    liveUrl: "#",
-    preview: "/Footer.svg", // troca depois
-    status: "wip",
+    techs: ["ReactJS", "CSS", "Vite"],
+    codeUrl: "https://github.com/miguelgomescy/Transportadora",
+    liveUrl: "https://transportadora-gilt.vercel.app/",
+    preview: "/projects/transportadora.svg",
+    status: "Online",
   },
   {
     id: 7,

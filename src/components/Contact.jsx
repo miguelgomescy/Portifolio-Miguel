@@ -15,11 +15,11 @@ export default function Contact() {
           {/* coluna texto */}
           <div className="contact-text">
             <h3 className="contact-question">
-              Que desenvolvermos algo incrível?
+              Que tal desenvolvermos algo incrível?
             </h3>
             <p className="contact-intro">
               Estou disponível para conversas sobre novos projetos,
-              novas parcerias, trabalhos freelancers, etc.
+              novas parcerias, trabalhos, etc.
             </p>
 
             <p className="contact-list-title">Se você procura por:</p>

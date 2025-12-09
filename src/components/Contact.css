@@ -128,7 +128,10 @@
 .contact-btn-secondary {
   background: transparent;
   color: #e5d9ff;
+  display: flex;
+  gap: 20px;
 }
+
 
 .contact-btn:hover {
   transform: translateY(-1px);
