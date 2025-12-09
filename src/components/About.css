@@ -1,0 +1,179 @@
+/* src/components/About.css */
+
+.about-section {
+  padding: 80px 0;
+  color: #f9fafb;
+}
+
+/* TÍTULO */
+
+.about-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 48px;
+  color: #f5e1ff;
+  text-shadow: 0 0 22px rgba(168, 85, 247, 0.35);
+}
+
+/* LAYOUT PRINCIPAL */
+
+.about-content {
+  max-width: 980px;
+  margin: 0 auto 40px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+
+/* FOTO */
+
+.about-photo-wrapper {
+  flex: 0 0 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(168, 85, 247, 0.7);
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* TIMELINE */
+
+.about-timeline {
+  position: relative;
+  flex: 1;
+  padding-left: 48px;
+}
+
+/* linha atrás dos ícones */
+.timeline-line {
+  position: absolute;
+  left: 45px;
+  right: 0px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #fafafa,
+    rgba(168, 85, 247, 0.7),
+    rgba(255, 255, 255, 0.7)
+  );
+  z-index: 0; 
+  height: 320px;
+}
+
+/* cada item da linha do tempo */
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 28px;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+}
+
+/* wrapper do ícone (fica “em cima” da linha) */
+.timeline-icon-wrapper {
+  position: relative;
+  z-index: 5 !important; /* na frente da linha */
+  flex: 0 0 48px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ícone em si (SVG que você vai colocar) */
+.timeline-icon {
+    
+   /*  background: transparent; */
+
+  width: 34px;
+  height: 34px;
+  background-color: #00000066;
+  transform: scale(0.75);
+  opacity: 0.45;
+  transition:
+    transform 0.25s ease-out,
+    opacity 0.25s ease-out,
+    box-shadow 0.25s ease-out;
+    z-index: 20;
+}
+
+/* quando o item entra na tela (IntersectionObserver) */
+.timeline-item--visible .timeline-icon {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.timeline-text {
+  padding-top: 4px;
+}
+
+.timeline-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+.timeline-sub {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+}
+
+/* TEXTO EMBAIXO */
+
+.about-description {
+  max-width: 980px;
+  margin: 32px auto 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+.about-description p + p {
+  margin-top: 10px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-photo-wrapper {
+    flex: 0 0 auto;
+    width: 280px;
+  }
+
+  .about-timeline {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-section {
+    padding: 56px 0;
+  }
+}

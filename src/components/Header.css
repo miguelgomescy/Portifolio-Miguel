@@ -1,0 +1,250 @@
+/* ===== HEADER BASE ===== */
+
+.header {
+  width: 100%;
+  padding: 18px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  background: linear-gradient(
+    to right,
+    #090514 0%,
+    #0b0618 40%,
+    #05030c 100%
+  );
+}
+
+/* logo / nome */
+.header-logo {
+  font-size: 1.563rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* tira sublinhado do link do logo e mantém cor bonita */
+.header a {
+  text-decoration: none;
+  color: #f9fafb;
+}
+
+/* navegação desktop */
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-nav a {
+  font-size: 1.25rem;
+  color: #D4AF37;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.header-nav a:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* ===== LANGUAGE SWITCH (DESKTOP) ===== */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* language selector */
+.lang-switch {
+  position: relative;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 58, 237, 0.6);
+  background: rgba(11, 7, 24, 0.9);
+}
+
+.lang-switch.is-open {
+  background: rgba(76, 29, 149, 0.75);
+}
+
+.lang-flag {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.lang-code {
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.06em;
+}
+
+.lang-arrow {
+  font-size: 0.7rem;
+  transform: translateY(1px);
+}
+
+/* dropdown */
+.lang-dropdown {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  width: 130px;
+  background: #0b0718;
+  border: 1px solid rgba(120, 53, 220, 0.8);
+  border-radius: 10px;
+  padding: 6px 0;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+}
+
+.lang-option {
+  width: 100%;
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.lang-option:hover {
+  background: rgba(124, 58, 237, 0.85);
+  color: #fff;
+}
+
+/* ===== MENU SANDUÍCHE ===== */
+
+.menu-toggle {
+  display: none; /* só mostra no mobile */
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.menu-toggle span {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #f9fafb;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-toggle.is-open {
+  background: rgba(88, 28, 135, 0.95);
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ===== MENU MOBILE ===== */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 60px 16px 16px;
+  border-radius: 18px;
+  background: radial-gradient(circle at top, #1f1537, #05030c);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.6);
+  padding: 20px 18px 18px;
+  z-index: 19;
+}
+
+.mobile-menu.is-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-nav a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(249, 250, 251, 0.92);
+  text-decoration: none;
+}
+
+.mobile-nav a:hover {
+  color: #ffffff;
+}
+
+.mobile-lang {
+  padding-top: 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.mobile-lang-btn {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 58, 237, 0.8);
+  background: rgba(24, 16, 58, 0.95);
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* ===== MOBILE BREAKPOINT ===== */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 14px 20px;
+  }
+
+  /* some apenas o nome + ícone no topo */
+  .header-nav,
+  .header-actions {
+    display: none;
+  }
+
+  .header-logo {
+    font-size: 0.8rem;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
